@@ -1,25 +1,25 @@
-var Churchill = {
-	name: "Churchill",
+var churchill = {
+	writer: "Churchill",
 	year: 1940,
 	bce: false
 };
 
-var Gandhi = {
-	name: "Gandhi",
+var gandhi = {
+	writer: "Gandhi",
 	year: 1942,
 	bce: false
 };
 
-var Demosthenes = {
-	name: "Demosthenes",
+var demosthenes = {
+	writer: "Demosthenes",
 	year: 342,
 	bce: true
 };
 
 var speech = [
-	{Churchill},
-	{Gandhi},
-	{Demosthenes}
+	churchill,
+	gandhi,
+	demosthenes
 ];
 
 var yearsApart = 1942-1940;
@@ -27,21 +27,17 @@ var yearsApart = 1942-1940;
 console.log("Gandhi's speech and Churchill's speech are " +  yearsApart + " years apart.");
 
 document.getElementById('BtnDonate').addEventListener('click', function(){
-  //Code in here executes when the user clicks the "Donate" button.
-  console.log("There are " + speech.length + " speeches on the page.");
+  console.log("There are " + speech.length + " speeches on the page.")
 });
 
 document.getElementById('BtnChurchill').addEventListener('click', function(){
-  //Code in here executes when the user clicks the "Churchill" button.
-	console.log("This speech was written by " + Churchill.name + " in " + Churchill.year + "." " It is " + Churchill.bce + " that this year is B.C.E.");
+	console.log("This speech was written by " + speech[0].writer + " in " + speech[0].year + " . It is " + speech[0].bce + " that this year is B.C.E.");
 });
 
 document.getElementById('BtnGhandi').addEventListener('click', function(){
-  //Code in here executes when the user clicks the "Ghandi" button.
-	console.log("This speech was written by " + Gandhi.name + " in " + Gandhi.year + "." " It is " + Gandhi.bce + " that this year is B.C.E.");
+	console.log("This speech was written by " + speech[1].writer + " in " + speech[1].year + " . It is " + speech[1].bce + " that this year is B.C.E.");
 });
 
 document.getElementById('BtnDemosthenes').addEventListener('click', function(){
-  //Code in here executes when the user clicks the "Demosthenes" button.
-	console.log("This speech was written by " + Demosthenes.name + " in " + Demosthenes.year + "." " It is " + Demosthenes.bce + " that this year is B.C.E.");
-});
+	console.log("This speech was written by " + speech[2].writer + " in " + speech[2].year + " . It is " + speech[2].bce + " that this year is B.C.E.");
+}); 
